@@ -1,7 +1,7 @@
 import type React from "react";
 import { PhoneIcon } from "lucide-react";
 import "./Header.scss";
-import BhiveLogo from "@/assets/icons/BhiveLogo.svg";
+import BhiveLogo from "../../assets/icons/BhiveLogo.svg";
 
 const Header: React.FC = () => {
   return (

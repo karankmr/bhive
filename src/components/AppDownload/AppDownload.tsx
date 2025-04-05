@@ -1,5 +1,5 @@
 import type React from "react";
-import { useMobile } from "@/hooks/useMobile";
+import { useMobile } from "../../hooks/useMobile";
 import "./AppDownload.scss";
 
 const AppDownload: React.FC = () => {

@@ -56,24 +56,34 @@ const Spaces: React.FC = () => {
 
   return (
     <section className="spaces-section">
+      <h2 className="section-title">Our Space Overview</h2>
       <div className="container">
-        <h2 className="section-title">Our Space Overview</h2>
-        <div className="spaces-grid">
-          {workspaces.map((workspace, index) => (
-            <WorksSpaceCard
-              key={index}
-              image={workspace.image}
-              type={workspace.type}
-              location={workspace.location}
-              dayPrice={workspace.dayPrice}
-              bulkPrice={workspace.bulkPrice}
-              bulkDays={workspace.bulkDays}
-            />
-          ))}
-        </div>
+         <div className="card"></div>
+         <div className="card"></div>
+         <div className="card"></div>
+         <div className="card"></div>
+         <div className="card"></div>
+         <div className="card"></div>
+         <div className="card"></div>
       </div>
     </section>
   );
 };
 
 export default Spaces;
+
+
+{/* <h2 className="section-title">Our Space Overview</h2>
+<div className="spaces-grid">
+  {workspaces.map((workspace, index) => (
+    <WorksSpaceCard
+      key={index}
+      image={workspace.image}
+      type={workspace.type}
+      location={workspace.location}
+      dayPrice={workspace.dayPrice}
+      bulkPrice={workspace.bulkPrice}
+      bulkDays={workspace.bulkDays}
+    />
+  ))}
+</div> */}

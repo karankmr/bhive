@@ -1,14 +1,14 @@
 import type React from "react";
 import FeatureItem from "./FeatureItem";
 import "./Features.scss";
-import Community from "@/assets/icons/Community.svg"
-import Gym from "@/assets/icons/Gym.svg"
-import Wifi from "@/assets/icons/Wifi.svg"
-import Cafe from "@/assets/icons/Cafe.svg"
-import Affordable from "@/assets/icons/Affordable.svg"
-import Comfort from "@/assets/icons/Comfort.svg"
-import Booking from "@/assets/icons/Booking.svg"
-import Sports from "@/assets/icons/Sports.svg"
+import Community from "../../assets/icons/Community.svg"
+import Gym from "../../assets/icons/Gym.svg"
+import Wifi from "../../assets/icons/Wifi.svg"
+import Cafe from "../../assets/icons/Cafe.svg"
+import Affordable from "../../assets/icons/Affordable.svg"
+import Comfort from "../../assets/icons/Comfort.svg"
+import Booking from "../../assets/icons/Booking.svg"
+import Sports from "../../assets/icons/Sports.svg"
 
 const Features: React.FC = () => {
   const features = [
