@@ -1,4 +1,4 @@
-import Layout from "@/src/components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import AppDownloadSection from "../../components/AppDownload/AppDownloadSection";
 import Features from "../../components/Features/Features";
 import Hero from "../../components/Hero/Hero";
