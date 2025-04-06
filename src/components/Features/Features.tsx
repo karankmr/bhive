@@ -1,14 +1,14 @@
 import type React from "react";
 import FeatureItem from "./FeatureItem/FeatureItem";
 import "./Features.scss";
-import Community from "../../assets/icons/Community.svg";
-import Gym from "../../assets/icons/Gym.svg";
-import Wifi from "../../assets/icons/Wifi.svg";
-import Cafe from "../../assets/icons/Cafe.svg";
-import Affordable from "../../assets/icons/Affordable.svg";
-import Comfort from "../../assets/icons/Comfort.svg";
-import Booking from "../../assets/icons/Booking.svg";
-import Sports from "../../assets/icons/Sports.svg";
+import Community from "../../assets/icons/community.svg";
+import Gym from "../../assets/icons/gym.svg";
+import Wifi from "../../assets/icons/wifi.svg";
+import Cafe from "../../assets/icons/cafe.svg";
+import Affordable from "../../assets/icons/affordable.svg";
+import Comfort from "../../assets/icons/comfort.svg";
+import Booking from "../../assets/icons/booking.svg";
+import Sports from "../../assets/icons/sports.svg";
 
 const features = [
   { icon: Community, title: "Community Events" },
