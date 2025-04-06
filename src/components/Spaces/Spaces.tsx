@@ -1,89 +1,42 @@
-import type React from "react";
-import WorksSpaceCard from "./WorksSpaceCard";
+import React, { useEffect, useState } from "react";
 import "./Spaces.scss";
+import { Workspace } from "../types/workspace";
+import WorkspaceCard from "./WorkSpaceCard/WorksSpaceCard";
+
+const rawRepoBase =
+  "https://raw.githubusercontent.com/MujtabaKably/bhive-interview-project-data/refs/heads/main";
 
 const Spaces: React.FC = () => {
-  const workspaces = [
-    {
-      image: "/images/workspace-1.png",
-      type: "Workspace",
-      location: "HSR Sector 6, Service Road",
-      dayPrice: 249,
-      bulkPrice: 2400,
-      bulkDays: 10,
-    },
-    {
-      image: "/images/workspace-2.png",
-      type: "Flexyspace",
-      location: "HSR Sector 6, Service Road",
-      dayPrice: 249,
-      bulkPrice: 2400,
-      bulkDays: 10,
-    },
-    {
-      image: "/images/workspace-3.png",
-      type: "Platinum",
-      location: "HSR Sector -6, 5th main",
-      dayPrice: 249,
-      bulkPrice: 2400,
-      bulkDays: 10,
-    },
-    {
-      image: "/images/workspace-4.png",
-      type: "Workspace",
-      location: "HSR Sector -2, 27th main Road",
-      dayPrice: 249,
-      bulkPrice: 2400,
-      bulkDays: 10,
-    },
-    {
-      image: "/images/workspace-5.png",
-      type: "Campus",
-      location: "HSR Sector 6, Service Road",
-      dayPrice: 249,
-      bulkPrice: 2400,
-      bulkDays: 10,
-    },
-    {
-      image: "/images/workspace-6.png",
-      type: "Platinum",
-      location: "HSR Sector -6, 5th main",
-      dayPrice: 249,
-      bulkPrice: 2400,
-      bulkDays: 10,
-    },
-  ];
+  const [spaces, setSpaces] = useState<Workspace[]>([]);
+
+  useEffect(() => {
+    fetch(`${rawRepoBase}/data.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        const activeSpaces = data.filter(
+          (item: Workspace) => item.is_day_pass_enabled,
+        );
+        setSpaces(activeSpaces);
+      });
+  }, []);
 
   return (
     <section className="spaces-section">
-      <h2 className="section-title">Our Space Overview</h2>
-      <div className="container">
-         <div className="card"></div>
-         <div className="card"></div>
-         <div className="card"></div>
-         <div className="card"></div>
-         <div className="card"></div>
-         <div className="card"></div>
-         <div className="card"></div>
+      <div className="wrapper">
+        <h2 className="section-title">Our Space Overview</h2>
+        <div className="container">
+          {spaces.map((space) => (
+            <WorkspaceCard
+              key={space.id}
+              data={space}
+              distance="6 Kms"
+              imageBaseURL={`${rawRepoBase}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
 export default Spaces;
-
-
-{/* <h2 className="section-title">Our Space Overview</h2>
-<div className="spaces-grid">
-  {workspaces.map((workspace, index) => (
-    <WorksSpaceCard
-      key={index}
-      image={workspace.image}
-      type={workspace.type}
-      location={workspace.location}
-      dayPrice={workspace.dayPrice}
-      bulkPrice={workspace.bulkPrice}
-      bulkDays={workspace.bulkDays}
-    />
-  ))}
-</div> */}

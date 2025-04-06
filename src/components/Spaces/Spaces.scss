@@ -1,5 +1,20 @@
 .spaces-section {
-  padding: 0 6rem;
+  margin: 8rem 0;
+
+  .wrapper {
+    padding: 0 6rem;
+    margin: 0 auto;
+    width: 82%;
+
+    .section-title {
+      margin: 0;
+      margin-bottom: 2.5rem;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 45px;
+      letter-spacing: 0.3px;
+    }
+  }
 
   .container {
     display: grid;
@@ -7,11 +22,32 @@
     grid-template-rows: 1fr;
     gap: 3rem;
 
-
-   .card {
+    .card {
       height: 100px;
       background-color: red;
     }
   }
-}
 
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0 1rem;
+
+    .wrapper {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      .section-title {
+        font-weight: 700;
+        font-size: 24px;
+
+        margin: 2rem 0 1rem;
+      }
+    }
+
+    .container {
+      grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
+      gap: 1rem;
+    }
+  }
+}

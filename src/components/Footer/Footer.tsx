@@ -4,9 +4,7 @@ import "./Footer.scss";
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <div className="container">
-        <p>© Copyright 2024, Bhive Private Limited</p>
-      </div>
+      <p>© Copyright 2024, Bhive Private Limited</p>
     </footer>
   );
 };

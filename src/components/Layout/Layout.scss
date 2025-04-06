@@ -1,0 +1,13 @@
+.bhive-app {
+  background-color: #f9faff;
+  main {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      max-width: unset;
+    }
+  }
+}

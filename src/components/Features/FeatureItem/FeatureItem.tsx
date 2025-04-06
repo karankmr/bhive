@@ -9,9 +9,7 @@ interface FeatureItemProps {
 const FeatureItem: React.FC<FeatureItemProps> = ({ icon, title }) => {
   return (
     <div className="feature-item">
-      <div className="feature-icon">
-        <img src={icon} alt={title} width={24} height={24} />
-      </div>
+      <img src={icon} alt={title} width={24} height={24} />
       <p className="feature-title">{title}</p>
     </div>
   );

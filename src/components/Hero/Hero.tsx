@@ -1,19 +1,16 @@
 import type React from "react";
 import "./Hero.scss";
-import CoworkingImg from "../../assets/images/Coworking.svg";
-
 
 const Hero: React.FC = () => {
   return (
     <section className="hero-section">
       <div className="hero-left">
         <h1>
-          Host your meeting with world-class amenities.
-          Starting at <span className="price">₹199/-!</span>
+          Host your meeting with world-class amenities. Starting at{" "}
+          <span className="price">₹199/-!</span>
         </h1>
       </div>
-      <div className="hero-right">     
-      </div>
+      <div className="hero-right"></div>
     </section>
   );
 };

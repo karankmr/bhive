@@ -1,5 +1,19 @@
 .features-section {
-  padding: 40px 0;
+  margin: 4rem 0;
+  .container {
+    padding: 0 6rem;
+    margin: 0 auto;
+    width: 82%;
+
+    .section-title {
+      margin: 0;
+      margin-bottom: 2.5rem;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 45px;
+      letter-spacing: 0.3px;
+    }
+  }
 
   .features-grid {
     display: grid;
@@ -11,5 +25,22 @@
       gap: 30px;
     }
   }
-}
 
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0 1rem;
+
+    .container {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+
+      .section-title {
+        font-weight: 700;
+        font-size: 24px;
+
+        margin: 2rem 0 1rem;
+      }
+    }
+  }
+}

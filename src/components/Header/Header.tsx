@@ -1,7 +1,7 @@
 import type React from "react";
-import { PhoneIcon } from "lucide-react";
 import "./Header.scss";
-import BhiveLogo from "../../assets/icons/BhiveLogo.svg";
+import BhiveLogo from "../../assets/icons/bhive-logo.svg";
+import PhoneIcon from "../../assets/icons/phone-icon.svg";
 
 const Header: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
           />
         </div>
         <div className="phone-container">
-          <PhoneIcon className="phone-icon" />
+          <img src={PhoneIcon} width={52} height={52} />
         </div>
       </div>
     </header>
